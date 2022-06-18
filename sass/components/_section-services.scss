@@ -3,7 +3,11 @@
 //         display: none;
 //     }
 // }
-
+.section-services{
+    @include mq(mobile) {
+        display: none;
+    }
+}
 .services {
     display: flex;
     justify-content: center;

@@ -6,7 +6,6 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
 @import "./utils/mixins";
-@import "./utils/breakpoints";
 
 // Components
 @import "./components/page-header";
@@ -15,4 +14,5 @@
 @import './components/footer';
 @import './components/modal';
 @import './components/overlay';
-@import './components/portfolio'
+@import './components/portfolio';
+@import './components/mobile-menu';

@@ -33,6 +33,10 @@
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
+
+    @include mq(mobile-only){
+    display: none;
+    }
 }
 .site-nav--item {
     margin-right: 50px;
