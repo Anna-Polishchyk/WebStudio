@@ -1,12 +1,25 @@
 .header {
-    border-bottom: 1px solid #ECECEC;
-    .container {
+//   display: block;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+  .conteiner {
     display: flex;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    height: 80px;
+    @include mq(mobile-only) {
+      justify-content: space-between;
     }
+  }
 }
+// .header {
+//     border-bottom: 1px solid #ECECEC;
+//     .container {
+//     display: flex;
+//     align-items: center;
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     }
+// }
 
 .header--logo {
     margin-right: 93px;

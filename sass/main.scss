@@ -1,3 +1,5 @@
+@import "./utils/mixins";
+
 // Base
 @import "./base/normalize";
 @import "./base/common";
@@ -5,7 +7,6 @@
 // Utils
 @import "./utils/variables";
 @import "./utils/visually-hidden";
-@import "./utils/mixins";
 
 // Components
 @import "./components/page-header";
