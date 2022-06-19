@@ -1,19 +1,24 @@
-@import "./utils/mixins";
+// Utils
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
 
 // Base
-@import "./base/normalize";
-@import "./base/common";
-
-// Utils
-@import "./utils/variables";
-@import "./utils/visually-hidden";
+@import './base/normalize';
+@import './base/common';
+@import './base/reset';
 
 // Components
-@import "./components/page-header";
-@import './components/hero';
-@import './components/main-section';
-@import './components/footer';
+@import './components/mobile-menu';
 @import './components/modal';
 @import './components/overlay';
-@import './components/portfolio';
-@import './components/mobile-menu';
+
+//Layouts
+@import './layouts/page-header';
+@import './layouts/hero';
+@import './layouts/section-advantages';
+@import './layouts/section-services';
+@import './layouts/section-team';
+@import './layouts/section-clients';
+@import './layouts/footer';
+@import './layouts/portfolio';
