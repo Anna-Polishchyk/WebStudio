@@ -1,25 +1,12 @@
 .header {
-//   display: block;
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #ececec;
-  .conteiner {
+    border-bottom: 1px solid #ECECEC;
+    .container {
     display: flex;
-    height: 80px;
-    @include mq(mobile-only) {
-      justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
     }
-  }
 }
-// .header {
-//     border-bottom: 1px solid #ECECEC;
-//     .container {
-//     display: flex;
-//     align-items: center;
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     }
-// }
 
 .header--logo {
     margin-right: 93px;
@@ -46,10 +33,6 @@
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
-
-    @include mq(mobile-only){
-    display: none;
-    }
 }
 .site-nav--item {
     margin-right: 50px;
