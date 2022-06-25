@@ -289,8 +289,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -330,6 +329,10 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
+
+h1 {
+  margin: 0;
 }
 
 h3 {
@@ -787,31 +790,37 @@ h3 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Img-17-2.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-17-2.jpg);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero--title {
   color: #FFFFFF;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3;
+  font-size: 26px;
+  line-height: 42px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  max-width: 600px;
   margin: auto;
 }
 
 @media screen and (min-width: 1200px) {
   .hero--title {
     font-size: 44px;
-    max-width: 696px;
+    line-height: 1.4;
   }
 }
 
@@ -905,13 +914,22 @@ h3 {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: var(--title-text-color);
 }
 
 @media screen and (min-width: 768px) {
   .advantages--title {
     text-align: start;
   }
+}
+
+.advantages--description {
+  color: #757575;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  text-transform: none;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .services {
@@ -923,7 +941,25 @@ h3 {
           justify-content: center;
 }
 
-.section--title {
+@media screen and (max-width: 767.98px) {
+  .services {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .services {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services.section {
+    padding-top: 0;
+  }
+}
+
+.servicestitle {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
