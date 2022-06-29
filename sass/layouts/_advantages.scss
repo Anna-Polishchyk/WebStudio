@@ -1,46 +1,88 @@
-.advantage {
-    @include mq(mobile) {
-    width: 450px;
-  }
-  @include mq(tablet-only) {
-    display: flex;
-    flex-wrap: wrap;
-    width: 738px;
-    margin: -15px;
-  }
-  @include mq(desktop) {
-    display: flex;
-    width: 1200px;
-  }
+.advantages {
+    @include mq(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include mq(desktop) {
+      flex-wrap: nowrap;
+    }
+  //   @include mq(mobile) {
+  //   width: 450px;
+  // }
+  // @include mq(tablet-only) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   width: 738px;
+  //   margin: -15px;
+  // }
+  // @include mq(desktop) {
+  //   display: flex;
+  //   width: 1200px;
+  // }
 }
 
-.advantage--item {
-    @include mq(mobile) {
-    width: 100%;
-  }
-  &:not(:last-child) {
-    @include mq(mobile-only) {
-      margin-bottom: 30px;
+.advantages--item {
+  max-width: 450px;
+  
+    @include mq(tablet) {
+      max-width: 354px;
+    }
+    @include mq(desktop) {
+      max-width: 270px;
+      // margin-bottom: 0;
     }
   }
-  @include mq(tablet-only) {
-    flex-basis: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
+
+@include mq(mobile) {
+  .advantages--item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    }
+@include mq(desktop) {
+  .advantages--item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+// @include mq(tablet-only) {
+//   .advantages--item:not(:nth-last-child(-n + 2)) {
+//       margin-bottom: 30px;
+//     }
+//   }
+
+@include mq(tablet) {
+  .advantages--item:not(:nth-last-child(2n+1)) {
+      margin-right: 30px;
+    }
   }
 
-  @include mq(desktop) {
-    flex-basis: calc((100% - 3 * 30px) / 4);
-    margin-right: 30px;
-  }
-  &:last-child {
-    @include mq(desktop){margin-right: 0;}
-  }
-}
+  
+  //   @include mq(mobile) {
+  //   width: 100%;
+  // }
+  // &:not(:last-child) {
+  //   @include mq(mobile-only) {
+  //     margin-bottom: 30px;
+  //   }
+  // }
+  // @include mq(tablet-only) {
+  //   flex-basis: calc((100% - 4 * 15px) / 2);
+  //   margin: 15px;
+  // }
+
+  // @include mq(desktop) {
+  //   flex-basis: calc((100% - 3 * 30px) / 4);
+  //   margin-right: 30px;
+  // }
+  // &:last-child {
+  //   @include mq(desktop){margin-right: 0;}
+  // }
+
 
 .thumb {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   height: 120px;
+  padding: 100px, 25px;
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
@@ -65,9 +107,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
-    text-transform: none;
-    margin-bottom: 30px;
+    // text-transform: none;
+    // margin-bottom: 30px;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 

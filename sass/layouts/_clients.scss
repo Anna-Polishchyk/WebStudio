@@ -1,17 +1,33 @@
 .clients {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+
+    @include mq(desktop) {
+        flex-wrap: nowrap;
+    }
+    // @include mq(mobile-only) {
+    //     flex-direction: column;
+    // }
 }
 .clients--item {
-    margin-right: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 170px;
+    height: 92px;
+    width: 100%;
 
-    &:last-child {
-    margin-right: 0;
+    @include mq(mobile-only) {
+        margin: 0 auto 30px auto;
     }
 }
+
+@include mq(mobile-only) {
+        .clients--item:not(:nth-last-child(-n+2)){
+            margin-bottom: 30px;
+        }
+        .clients--item:not(:nth-last-child(2n+1)){
+            margin-right: 30px;
+        }
+    }
 
 .clients--link {
     fill: #AFB1B8;
