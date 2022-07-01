@@ -22,21 +22,24 @@
     }
 }
 .hero--title {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
     color: $backgroundWhiteColor;
     font-weight: 900;
     font-size: 26px;
     line-height: 42px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-align: center;
     // margin-top: 0;
     // margin-bottom: 30px;
-    // max-width: 600px;
-    margin: auto;
+    // margin: auto;
 
     @include mq(desktop) {
-      font-size: 44px;
-      line-height: 1.4;
-    //   max-width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+    max-width: 696px;
     }
     // font-weight: 900;
     // font-size: 26px;
