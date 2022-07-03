@@ -1,23 +1,44 @@
 .header {
     border-bottom: 1px solid #ECECEC;
-    .container {
-    display: flex;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    }
+    // .container {
+    // display: flex;
+    // align-items: center;
+    // margin-top: 0;
+    // margin-bottom: 0;
+    // }
 }
 
+.header--container {
+    display: flex;
+    position: relative;
+
+    @include mq(tablet) {
+        justify-content: center;
+        align-items: center;
+    }
+}
 .header--logo {
-    margin-right: 93px;
-    align-self: center;
+    padding: 16px 0;
+    margin-right: auto;
+
+    @include mq(tablet) {
+        padding: 24px 0;
+        margin-right: 88px;
+    }
+
+    @include mq(desktop) {
+        margin-right: 93px;
+    }
+    // margin-right: 93px;
+    // align-self: center;
 }
 .site-nav {
+    display: flex;
+    align-items: center;
     color:$primaryTextColor;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1;
-    display: flex;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -27,7 +48,7 @@
     color: $primaryTextColor;
     }
 }
-.site-nav--menu {
+.site-nav--list {
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -67,12 +88,19 @@
     color: $accentColor;
 }
 .contacts {
+    display: flex;
+    margin-left: auto;
     color: $secondaryTextColor;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1;
-    display: flex;
-    margin-left: auto;
+
+    @include mq(tablet) {
+        flex-direction: column;
+    }
+    @include mq(desktop) {
+        flex-direction: row;
+    }
 }
 .contacts--item {
     display: flex;

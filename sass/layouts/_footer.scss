@@ -25,16 +25,18 @@
 }
 
 .footer--block {
-    @include mq(desktop) {
-        margin-bottom: 0;
-        margin-right: 70px;
-    }
-    &:last-child {
-        margin-left: auto;
-    }
     &:not(:last-child) {
         margin-bottom: 60px;
+        @include mq(desktop) {
+        margin-bottom: 0;
+        margin-right: 70px;
+        
+            &:last-child {
+            margin-left: auto;
+            }
+        }
     }
+    
 }
 
 .address {
@@ -92,7 +94,7 @@
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     font-size: 14px;
-    line-height:1.1;
+    line-height:1.14;
     margin-bottom: 20px;
 }
 
@@ -106,27 +108,42 @@
 //     align-items: baseline;
 // }
 .footer--form {
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin-left: auto;
+
+    @include mq(desktop) {
+        flex-direction: row;
+        align-items: baseline;
+    }
 }
 .footer--form input {
-    // width: 358px;
     height: 50px;
     color: rgba(255, 255, 255, 0.6);
     background-color: #2F303A;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 4px;
     padding: 15px 16px;
-    margin-right: 12px;
     outline: 0;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 30px;
 
-    @include mq(not-desktop) {
-        min-width: 450px;
+    @include mq(tablet) {
+        width: 450px;
     }
     @include mq(desktop) {
+        margin-bottom: 0;
+        margin-right: 12px;
         width: 358px;
     }
 }
 .footer--submit-btn {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     position: relative;
     font-weight: 700;
     font-size: 16px;
