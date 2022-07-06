@@ -1,10 +1,23 @@
 .projects--filter {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    // display: flex;
+    // justify-content: center;
+    // margin-bottom: 50px;
+    @include mq(tablet) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    @include mq(desktop) {
+        margin-bottom: 50px;
+    }
 }
 .filter-btn {
     color: $primaryTextColor;
@@ -28,6 +41,9 @@
     &:last-child {
     margin-right: 0;
 }
+    @include mq(mobile-only) {
+        margin-bottom: 15px;
+    }
 }
 
 .projects--filter .current {
@@ -71,12 +87,33 @@
 .projects {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    margin: -15px;
+    justify-content: center;
+    @include mq(tablet) {
+    justify-content: left;
+  }
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin-left: -30px;
+    // margin-top: -30px;
 }
 .set-item {
-    margin-left: 30px;
-    margin-top: 30px;
-    flex-basis: calc(100% / 3 - 30px);
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+
+    @include mq(mobile) {
+    width: 100%;
+    max-width: 450px;
+    }
+    @include mq(tablet) {
+    max-width: calc((100% - 4 * 15px) / 2);
+    }
+    @include mq(desktop) {
+    max-width: calc((100% - 6 * 15px) / 3);
+    }
+    // margin-left: 30px;
+    // margin-top: 30px;
+    // flex-basis: calc(100% / 3 - 30px);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

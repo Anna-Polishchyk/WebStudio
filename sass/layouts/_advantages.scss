@@ -27,13 +27,14 @@
     @include mq(tablet) {
       max-width: 354px;
     }
+
     @include mq(desktop) {
       max-width: 270px;
       // margin-bottom: 0;
     }
   }
 
-@include mq(mobile) {
+@include mq(mobile-only) {
   .advantages--item:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -43,11 +44,11 @@
       margin-right: 30px;
     }
   }
-// @include mq(tablet-only) {
-//   .advantages--item:not(:nth-last-child(-n + 2)) {
-//       margin-bottom: 30px;
-//     }
-//   }
+@include mq(tablet-only) {
+  .advantages--item:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
 
 @include mq(tablet) {
   .advantages--item:not(:nth-last-child(2n+1)) {
