@@ -11,6 +11,7 @@
 }
 
 .services-list--item {
+  display: block;
   position: relative;
   z-index: -1;
   &:not(:last-child) {
