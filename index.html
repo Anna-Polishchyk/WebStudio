@@ -23,7 +23,7 @@
     <header class="header">
       <div class="container header--container">
         <!--Navigation-->
-        <nav class="site-nav current">
+        <nav class="site-nav">
           <a href="./index.html" class="logo header--logo"
             >Web<span class="logo--text">Studio</span></a
           >
@@ -60,22 +60,18 @@
             >
           </li>
         </ul>
-        <!-- Button mobile-menu  -->
+        <!-- Button mobile menu  -->
         <button
           class="menu-toggle js-open-menu"
           aria-expanded="false"
-          aria-controls="mobile-menu "
+          aria-controls="mobile-menu"
           aria-label="Переключатель мобильного меню"
         >
           <svg class="mobile-toggle__icon" width="40" height="40">
             <use
               class="mobile-toggle__icon-menu"
-              href="./images/baground/sprite-icons.svg#menu-mobile"
+              href="./images/symbol-defs.svg#icon-menu_24px"
             ></use>
-            <!-- <use
-              class="mobile-button__icon-close"
-              href="./images/baground/sprite-icons.svg#close-mobile"
-            ></use> -->
           </svg>
         </button>
         <!-- Mobile menu  -->
@@ -84,31 +80,31 @@
             <svg class="mobile-toggle__icon" width="40" height="40">
               <use
                 class="mobile-toggle__icon-close"
-                href="./images/baground/sprite-icons.svg#close-mobile"
+                href="./images/symbol-defs.svg#icon-close_24px"
               ></use>
             </svg>
           </button>
           <div class="mobile-menu">
-            <ul class="mobile-nav">
+            <ul class="mobile-nav list">
               <li class="mobile-nav__item">
-                <a href="./index.html" class="mobile-nav__link mobile-nav__link--active">Студия</a>
+                <a href="./index.html" class="mobile-nav__link mobile-nav__link--active link">Студия</a>
               </li>
               <li class="mobile-nav__item">
-                <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+                <a href="./portfolio.html" class="mobile-nav__link link">Портфолио</a>
               </li>
-              <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
+              <li class="mobile-nav__item"><a href="" class="mobile-nav__link link">Контакты</a></li>
             </ul>
-            <ul class="mobile-contacts">
+            <ul class="mobile-contacts list">
               <li class="mobile-contacts__item">
-                <a class="mobile-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a class="mobile-contacts__link link" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
               <li class="mobile-contacts__item">
-                <a class="mobile-contacts__link" href="mailto:info@devstudio.com"
+                <a class="mobile-contacts__link link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
             </ul>
-            <ul class="mobile-social">
+            <ul class="mobile-social list">
               <li class="mobile-social__item">
                 <a href="" class="mobile-social__link">Instagram</a>
               </li>
@@ -605,9 +601,9 @@
               required
             />
             <span class="checkbox--icon"></span>
-            Соглашаюсь с рассылкой и принимаю<a href="" class="policy-link"
+            <span class="checkbox--text">Соглашаюсь с рассылкой и принимаю<a href="" class="policy-link"
               >Условия договора</a
-            ></label
+            ></span></label
           >
           <button class="submit-btn button" type="submit">Отправить</button>
         </form>
@@ -620,6 +616,12 @@
     </div>
     
     <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
