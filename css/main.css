@@ -483,13 +483,19 @@ h3 {
 }
 
 .form--header {
-  text-align: justify;
-  font-style: 700;
-  font-weight: bold;
+  display: block;
+  text-align: center;
+  font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   margin-top: 0;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form--header {
+    line-height: 1.15;
+  }
 }
 
 .form--input {
